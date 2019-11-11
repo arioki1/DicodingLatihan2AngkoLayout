@@ -1,9 +1,8 @@
 package com.arioki.latihan2angkolayout
 
 import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import org.jetbrains.anko.*
 
 class SecondActivity : AppCompatActivity() {

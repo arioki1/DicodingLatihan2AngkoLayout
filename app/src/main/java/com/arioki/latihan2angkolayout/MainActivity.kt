@@ -1,13 +1,8 @@
 package com.arioki.latihan2angkolayout
 
-import android.content.Context
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.view.View
-import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.*
+import androidx.appcompat.app.AppCompatActivity
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.snackbar
 
@@ -36,10 +31,11 @@ class MainActivity : AppCompatActivity() {
                     backgroundColor = Color.BLUE
                     textColor = Color.WHITE
                     setOnClickListener {
-                        alert("Happy coding !","Hello ,  ${name.text}!") {
-                        yesButton { toast("oh") }
-                        noButton { toast("yes") }
-                    }.show() }
+                        alert("Happy coding !", "Hello ,  ${name.text}!") {
+                            yesButton { toast("oh") }
+                            noButton { toast("yes") }
+                        }.show()
+                    }
                 }.lparams(width = matchParent) {
                     topMargin = dip(5)
                 }
@@ -48,8 +44,11 @@ class MainActivity : AppCompatActivity() {
                     backgroundColor = Color.BLUE
                     textColor = Color.WHITE
                     val club = listOf("Barcelona", "Real Madrid", "Bayern Munchen", "Liverpool")
-                    selector("\"Hello, ${name.text}! What's football club do you love? ",club){
-                        _,i-> toast(club[i])
+                    selector(
+                        "\"Hello, ${name.text}! What's football club do you love? ",
+                        club
+                    ) { _, i ->
+                        toast(club[i])
                     }
                 }.lparams(width = matchParent) {
                     topMargin = dip(5)
